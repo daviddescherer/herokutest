@@ -1,11 +1,11 @@
 body{
-    background-image: linear-gradient(to bottom right, red, blue);
+    background-image: linear-gradient(to bottom right,black, white);
     color:gold;
     text-align: center;
 }
 
-#green{ 
-    color: green;
+#blue{ 
+    color: blue;
 }
 
 #salmon{
