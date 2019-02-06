@@ -1,10 +1,17 @@
 body{
-    background-color: salmon;
+    background-image: linear-gradient(to bottom right, red, blue);
     color:gold;
     text-align: center;
 }
 
+#green{ 
+    color: green;
+}
+
+#salmon{
+    color: salmon;
+}
+
 h1{
     color: white;
-    text-align: center;
 }
