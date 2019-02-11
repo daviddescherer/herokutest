@@ -7,10 +7,34 @@
     <body id="body_index">
         <ul>
             <li><a class="active" href="/">Home</a></li>
-            <li><a href="/page2">Second Page</a></li>
+            <li><a href="/page2">Fencing Page</a></li>
         </ul>
         <h1>Hello World</h1>
         <p>Some wordsdflkd</p>
+
+        <canvas id="testCanvas" width="500px" height="500px" style="border: 3px solid black"></canvas>
+        <script>
+            let canvas = document.getElementById("testCanvas");
+            var ctx = canvas.getContext("2d");
+            var x = 0;
+            
+            setInterval(10, draw());
+
+            function draw()
+            {
+                ctx.beginPath();
+                ctx.fillStyle = "#ffffff";
+                ctx.rect(x, 250, 25, 25);
+                ctx.fill();
+                ctx.closePath();
+                x++;
+            }
+
+        
+
+
+            
+        </script>
         <div id="blue">
             <h3>all text from here until there is green</h3>
             <p>are these green</p>
