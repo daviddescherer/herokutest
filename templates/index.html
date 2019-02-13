@@ -16,18 +16,27 @@
         <script>
             let canvas = document.getElementById("testCanvas");
             var ctx = canvas.getContext("2d");
-            var x = 0;
+            var x = 200;
+            var y = 250;
+            var dx = 2;
+            var dy = 1;
+            var squareWidth = 25;
+            var squareHeight = 25;
             
-            setInterval(10, draw());
+            setInterval(draw, 10);
 
             function draw()
             {
-                ctx.beginPath();
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
                 ctx.fillStyle = "#ffffff";
-                ctx.rect(x, 250, 25, 25);
-                ctx.fill();
-                ctx.closePath();
-                x++;
+                ctx.fillRect(x, y, squareWidth, squareHeight);
+                
+                if (x+squareWidth >=canvas.width) dx *= -1;
+                if (x <= 0) dx *= -1;
+                if (y+squareHeight >=canvas.height) dy *=-1;
+                if (y <=0) dy *=-1;
+                x+=dx;
+                y+=dy;
             }
 
         
